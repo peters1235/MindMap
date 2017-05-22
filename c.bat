@@ -1,2 +1,5 @@
 cd /d d:\Maps
-git-bash.exe cmt.sh
+git add .
+git commit -m "%DATE%"
+git push
+pause
