@@ -1,0 +1,5 @@
+cd /d d:\Maps
+git add .
+git commit -m "%DATE%"
+git push
+pause

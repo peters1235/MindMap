@@ -1,0 +1,17 @@
+ubuntu允许root远程ssh登录 
+注意：su用户权限大于sudo权限
+1)	开放root用户：
+$ sudo passwd root     //设置密码
+ubuntu默认root无密码，不能登录，如果要使用root用户登录，必须为root用户设置密码。退出终端，重启计算机，选择用户root登录。
+
+2)	修改/etc/ssh/sshd_config
+$ sudo root
+# vi  /etc/ssh/sshd_config
+# Authentication:
+LoginGraceTime 120
+#PermitRootLogin without-password  //注释
+PermitRootLogin yes                //添加
+StrictModes yes
+
+3)	重启 ssh  服务
+#sudo service ssh restart
